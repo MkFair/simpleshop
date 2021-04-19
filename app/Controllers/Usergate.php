@@ -7,7 +7,16 @@ class Usergate extends BaseController{
         echo view("usergate/register");
         echo view("usergate/footer");
     }
-    
+    function login(){
+        echo view("usergate/header");
+        echo view("usergate/login");
+        echo view("usergate/footer");
+    }
+    function login_process(){
+        if( $this->request->getVar("email",FILTER_SANITIZE_EMAIL) and $this->request->getVar("password") ){
+            
+        }
+    }
     function seller_reg(){
         $validation = \Config\Services::validation();
         $validation->setRules([

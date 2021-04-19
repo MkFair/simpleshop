@@ -1,0 +1,7 @@
+CRITICAL - 2021-04-19 15:54:09 --> Call to undefined method App\Controllers\Usergate::view()
+#0 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Usergate->register()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#5 {main}

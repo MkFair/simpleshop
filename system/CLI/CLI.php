@@ -893,7 +893,7 @@ class CLI
 		{
 			// If there's no '-' at the beginning of the argument
 			// then add it to our segments.
-			if (mb_strpos($_SERVER['argv'][$i], '-') !== 0)
+			if (\mb_strpos($_SERVER['argv'][$i], '-') !== 0)
 			{
 				static::$segments[] = $_SERVER['argv'][$i];
 				continue;

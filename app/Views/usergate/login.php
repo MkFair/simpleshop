@@ -1,5 +1,6 @@
 <div class="container">
-	<div class="row">
+<br><br><br>	<div class="row">
+
 		<div class="col-lg-5 m-auto">
 			<div class="card ">
 				<div class="card-body">
@@ -15,42 +16,59 @@
 						  </li>
 					</ul>
 					<div class="tab-content">
+						<br>
 					  <div class="tab-pane fade show active" id="seller">
-					    <form>
+					    <form onsubmit="log();return false;">
 					    	<label>ФИО</label>
-					    	<input type="text" class="form-control" name=""><br>
+					    	<input type="text" class="form-control" name="fio" required=""><br>
 					    	<label>Email</label>
-							<input type="email" class="form-control" name="" placeholder="name@example.com"><br>
+							<input type="email" class="form-control" name="email" required placeholder="name@example.com"><br>
 							<label>Пароль</label>
-							<input type="password" class="form-control" name=""><br>
+							<input type="password" class="form-control" name="password" required><br>
 							<label>Адрес сайта</label>
-							<input type="text" class="form-control" name=""><br>
+							<input type="text" class="form-control" name="site_url" required><br>
 							<label>Описание сайта</label>
-							<input type="text" class="form-control" name=""><br>
+							<textarea class="form-control" name="site_type" required></textarea><br>
 							<label>Деятельность</label>
-							<input type="text" class="form-control" name=""><br>
+							<input type="text" class="form-control" name="services" required><br>
+							<center><button class="btn btn-primary ">
+							Зарегистрироваться
+								<br> </button></center>	
 					    </form>
 					  </div>
 					  <div class="tab-pane fade" id="client">
-					   	<form>
+					   	<form onsubmit="log();return false;">
 					    	<label>ФИО</label>
-					    	<input type="text" class="form-control" name=""><br>
+					    	<input type="text" class="form-control" name="fio" required><br>
 					    	<label>Email</label>
-							<input type="email" class="form-control" name="" placeholder="name@example.com"><br>
+							<input type="email" class="form-control" name="email" required placeholder="name@example.com"><br>
 							<label>Пароль</label>
-							<input type="password" class="form-control" name=""><br>
+							<input type="password" class="form-control" name="password" required><br>
+
+							<center><button class="btn btn-primary ">
+							Зарегистрироваться
+								<br> </button></center>	
 					    </form>
 					  </div>
 					</div>
 
-					<button class="btn btn-primary ">
-				Зарегистрироваться
-				<br>
 				
-					</button>
 				</div>
 				
 			</div>
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	function log() {
+		 var forms = $("form").serialize();
+		 $.ajax({
+        type: "POST",
+        url: "log.php",
+        data: {inp:forms}
+    }).done(function( result )
+        {
+	})
+	}
+</script>

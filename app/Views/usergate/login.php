@@ -24,7 +24,9 @@
 		</div>
 	</div>
 </div>
-
+/index.php/usergate/login_process
+пустой результ - ошибка
+["status"=>"ok"] - пересыл на /index.php/account
 <script type="text/javascript">
 	function log() {
 		 var forms = $("form").serialize();

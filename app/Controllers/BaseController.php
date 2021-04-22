@@ -18,7 +18,7 @@ use CodeIgniter\Controller;
 
 class BaseController extends Controller
 {
-
+    protected $data = [];
 	/**
 	 * An array of helpers to be loaded automatically upon
 	 * class instantiation. These helpers will be available
@@ -42,5 +42,9 @@ class BaseController extends Controller
 		// E.g.:
 		// $this->session = \Config\Services::session();
 	}
-
+    function display($template){
+        echo view("header.php",$this->data);
+        echo view($template,$this->data);
+        echo view("footer.php",$this->data);
+    }
 }

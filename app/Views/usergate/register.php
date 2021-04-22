@@ -59,6 +59,10 @@
 		</div>
 	</div>
 </div>
+/index.php/usergate/<method>
+method seller_reg и buyer_reg
+["status"=>"ok"] - показывать сообщение о успехе реги и просьбе подтвердить почту - уже отправлено
+["status"=>"error","errorlist"=>AssocArray] возврат массива с именами полей и значением ошибки
 
 <script type="text/javascript">
 	function sign_up() {

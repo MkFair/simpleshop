@@ -1,0 +1,30 @@
+CRITICAL - 2021-04-22 05:54:12 --> Class 'App\Controllers\StdClass' not found
+#0 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Account->index()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#5 {main}
+CRITICAL - 2021-04-22 05:54:47 --> Class 'App\Controllers\StdClass' not found
+#0 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Account->index()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#5 {main}
+CRITICAL - 2021-04-22 05:55:40 --> Class 'App\Controllers\StdClass' not found
+#0 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Account->index()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#5 {main}
+CRITICAL - 2021-04-22 05:56:21 --> Argument 2 passed to view() must be of the type array, null given, called in /home/mkalister/php/simpleshop/app/Controllers/BaseController.php on line 46
+#0 /home/mkalister/php/simpleshop/app/Controllers/BaseController.php(46): view()
+#1 /home/mkalister/php/simpleshop/app/Controllers/Account.php(10): App\Controllers\BaseController->display()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Account->index()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#4 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#5 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#7 {main}

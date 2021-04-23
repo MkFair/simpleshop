@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\Sitetype;
 class Usergate extends BaseController{
     function register(){
+        $m = new Sitetype();
+        $this->data["types"] = $m->findAll();
         echo view("usergate/header");
-        echo view("usergate/register");
+        echo view("usergate/register",$this->data);
         echo view("usergate/footer");
     }
     function login(){

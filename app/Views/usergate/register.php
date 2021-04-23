@@ -29,6 +29,17 @@
 							<input type="text" class="form-control" name="site_url" required><br>
 							<label>Описание сайта</label>
 							<textarea class="form-control" name="site_type" required></textarea><br>
+                            
+                            <div class="form-group">
+                                <select>
+                                <?php 
+                                if($types){
+                                    foreach($types as $type){?>
+                                        <option value="<?=$type["id"]?>"><?=$type["name"]?></option>
+                                <?php }} ?>
+                                </select>
+                            </div>
+                            
 							<label>Деятельность</label>
 							<input type="text" class="form-control" name="services" required><br>
 							<center><button class="btn btn-primary ">

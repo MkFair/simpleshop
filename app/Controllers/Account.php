@@ -9,6 +9,8 @@ class Account extends BaseController{
         $this->data["user_info"]->password = "password";
         $this->display("account/index.php");
     }
-    
+    function update(){
+        
+    }
     
 }

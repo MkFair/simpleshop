@@ -21,7 +21,7 @@ class Usergate extends BaseController{
         $validation = \Config\Services::validation();
         $validation->setRules([
             "fio"=>"required",
-            "email"=>"required|valid_email",
+            "email"=>"required|valid_email|is_unique[users.email]",
             "password"=>"required|min_length[5]",
             "site_url"=>"required|valid_url",
             "site_type"=>"required",
@@ -60,7 +60,7 @@ class Usergate extends BaseController{
         $validation = \Config\Services::validation();
         $validation->setRules([
             "fio"=>"required",
-            "email"=>"required|valid_email",
+            "email"=>"required|valid_email|is_unique[users.email]",
             "password"=>"required|min_length[5]",
         ],[
             "fio"=>["required"=>"Необходимо заполнить поле"],

@@ -6,7 +6,7 @@ class User extends Model{
     protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
     protected $returnType     = 'object';
-    protected $allowedFields = ['fio', 'site_url',"site_type"];
+    protected $allowedFields = ['fio',"email"];
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
 }

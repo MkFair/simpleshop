@@ -28,14 +28,20 @@
 пустой результ - ошибка
 ["status"=>"ok"] - пересыл на /index.php/account
 <script type="text/javascript">
+
+
+
 	function log() {
-		 var forms = $("form").serialize();
+		 var forms = $("form").serializeArray();
 		 $.ajax({
         type: "POST",
         url: "log.php",
         data: {inp:forms}
     }).done(function( result )
         {
+        	if(result==""){
+        		
+        	}
 	})
 	}
 </script>

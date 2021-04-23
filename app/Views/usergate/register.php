@@ -66,13 +66,14 @@ method seller_reg и buyer_reg
 
 <script type="text/javascript">
 	function sign_up() {
-		 var forms = $("form").serialize();
+		 var forms = $("form").serializeArray();
 		 $.ajax({
         type: "POST",
         url: "log.php",
         data: {inp:forms}
     }).done(function( result )
         {
+        	
 	})
 	}
 </script>

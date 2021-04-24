@@ -8,5 +8,7 @@ class Mainpage extends BaseController{
         $this->data["types"] = $m->findAll();
         $this->display("index");
     }
-    
+    function show($id){
+        $this->display("show_site");
+    }
 }

@@ -19,17 +19,31 @@
 						<br>
 					  <div class="tab-pane fade show active" id="seller">
 					    <form >
+
+					    	<div class="form-group">
 					    	<label>ФИО</label>
-					    	<input type="text" class="form-control" name="fio" required=""><br>
+					    	<input type="text" class="form-control" name="fio" required="">
+					    	 </div>
+
+					    	<div class="form-group">
 					    	<label>Email</label>
-							<input type="email" class="form-control" name="email" required placeholder="name@example.com"><br>
+							<input type="email" class="form-control" name="email" required placeholder="name@example.com">
+							 </div>
+
+							<div class="form-group">
 							<label>Пароль</label>
-							<input type="password" class="form-control" name="password" required><br>
+							<input type="password" class="form-control" name="password" required>
+							 </div>
+
+							<div class="form-group">
 							<label>Адрес сайта</label>
-							<input type="text" class="form-control" name="site_url" required><br>
+							<input type="text" class="form-control" name="site_url" required>
+							 </div>
+
+							<div class="form-group">
 							<label>Описание сайта</label>
-							<textarea class="form-control" name="site_type" required></textarea><br>
-                            
+							<textarea class="form-control" name="site_type" required></textarea>
+                             </div>
                             <div class="form-group">
                                 <select>
                                 <?php 
@@ -40,8 +54,13 @@
                                 </select>
                             </div>
                             
+
+                            <div class="form-group">
 							<label>Деятельность</label>
-							<input type="text" class="form-control" name="services" required><br>
+							<input type="text" class="form-control" name="services" required>
+							 </div>
+
+
 							<center><button class="btn btn-primary ">
 							Зарегистрироваться
 								<br> </button></center>	
@@ -49,13 +68,20 @@
 					  </div>
 					  <div class="tab-pane fade" id="client">
 					   	<form >
-					    	<label>ФИО</label>
-					    	<input type="text" class="form-control" name="fio" required><br>
-					    	<label>Email</label>
-							<input type="email" class="form-control" name="email" required placeholder="name@example.com"><br>
-							<label>Пароль</label>
-							<input type="password" class="form-control" name="password" required><br>
 
+					   		<div class="form-group">
+					    	<label>ФИО</label>
+					    	<input type="text" class="form-control" name="fio" required>
+					    	 </div>
+
+					    	<div class="form-group">
+					    	<label>Email</label>
+							<input type="email" class="form-control" name="email" required placeholder="name@example.com">
+							 </div>
+							<div class="form-group">
+							<label>Пароль</label>
+							<input type="password" class="form-control" name="password" required>
+							 </div>
 							<center><button class="btn btn-primary ">
 							Зарегистрироваться
 								<br> </button></center>	

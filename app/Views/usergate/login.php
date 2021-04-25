@@ -8,11 +8,18 @@
 					<center><b>Авторизация </b></center>
 					<br>
 
-					    <form onsubmit="log();return false;">
+					    <form onsubmit="return false;">
+
+					    	<div class="form-group">
 					    	<label>Email</label>
-							<input type="email" class="form-control" name="email" required placeholder="name@example.com"><br>
+							<input type="email" class="form-control" name="email" required placeholder="name@example.com">
+							 </div>
+
+							 <div class="form-group">
 							<label>Пароль</label>
-							<input type="password" class="form-control" name="password" required><br>
+							<input type="password" class="form-control" name="password" required>
+							 </div>
+
 							<center>	<button class="btn btn-primary">
 							Авторизоваться
 								<br> </button></center>	
@@ -24,24 +31,33 @@
 		</div>
 	</div>
 </div>
-/index.php/usergate/login_process
+
 пустой результ - ошибка
 ["status"=>"ok"] - пересыл на /index.php/account
 <script type="text/javascript">
 
+$("button").click(function(){
 
+$(".alert").remove();
 
-	function log() {
+	alert("hhhhgh");
 		 var forms = $("form").serializeArray();
 		 $.ajax({
         type: "POST",
-        url: "log.php",
+        url: "/index.php/usergate/login_process",
         data: {inp:forms}
     }).done(function( result )
         {
-        	if(result==""){
-        		
-        	}
-	})
-	}
+
+        	var anw = json.parse(result);
+
+        	if(anw==""){
+        		$("form").prepend("<div class='alert alert-danger' role='alert'>Неправильный логин или пароль</div>")
+
+        	}else if(anw['status']=="ok") {
+        		location.href("/index.php/account");
+        	} 
+
+		})
+})
 </script>

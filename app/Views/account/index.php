@@ -25,12 +25,21 @@
         if($error) echo"<div class='alert alert-danger alert-message'>$error</div>";
         if($success) echo"<div class='alert alert-success alert-message'>$success</div>";
         ?>
+
+<div class="form-group">
         <label>ФИО</label>
-        <input type="text" class="form-control" name="fio" required value="<?=$user_info->fio?>"> <br>
+        <input type="text" class="form-control" name="fio" required value="<?=$user_info->fio?>"> 
+  </div>
+<div class="form-group">
         <label>Email</label>
-        <input type="email" class="form-control" name="email" required placeholder="name@example.com" value="<?=$user_info->email?>"><br>
+        <input type="email" class="form-control" name="email" required placeholder="name@example.com" value="<?=$user_info->email?>">
+  </div>
+<div class="form-group">
         <label>Пароль(отавить пустым если замена не требуется)</label>
-        <input type="password" class="form-control" name="password" placeholder="******" value="<?=$user_info->password?>"><br>
+        <input type="password" class="form-control" name="password" placeholder="******" value="<?=$user_info->password?>">
+
+  </div>
+
         <button href="#" class="btn btn-primary">Сохранить</button>
 	</form>
 	</div>

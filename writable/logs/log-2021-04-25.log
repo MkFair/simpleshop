@@ -217,3 +217,27 @@ CRITICAL - 2021-04-25 09:38:58 --> syntax error, unexpected '{'
 #6 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #7 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
 #8 {main}
+CRITICAL - 2021-04-25 09:58:55 --> Call to a member function update() on null
+#0 /home/mkalister/php/simpleshop/app/Controllers/Home.php(17): App\Libraries\User->changeRole()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Home->role()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}
+CRITICAL - 2021-04-25 09:59:21 --> Call to a member function update() on null
+#0 /home/mkalister/php/simpleshop/app/Controllers/Home.php(17): App\Libraries\User->changeRole()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Home->role()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}
+CRITICAL - 2021-04-25 09:59:25 --> Call to a member function update() on null
+#0 /home/mkalister/php/simpleshop/app/Controllers/Home.php(17): App\Libraries\User->changeRole()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Home->role()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}

@@ -12,6 +12,11 @@ class Home extends BaseController
         $user->set_session();
         var_dump($user);
     }
+    function role($id){
+        $user = User::get_session();
+        $user->changeRole($id);
+        return redirect()->to("/account");
+    }
     function test_auth(){
         $user = User::get_session();
         var_dump($user);

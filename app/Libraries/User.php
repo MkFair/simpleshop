@@ -34,6 +34,11 @@ class User{
         $this->password = $userdata->password;
         $this->role = $userdata->role;
     }
+    function changeRole(int $role_id){
+        $this->role = $role_id;
+        $model = new \App\Models\User();
+        $model->update($this->id,["role"=>$this->role]);
+    }
     function update(array $userdata){
         if( !empty($userdata["fio"]) )
             $this->fio = $userdata["fio"];

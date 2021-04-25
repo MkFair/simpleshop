@@ -16,6 +16,13 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Аккаунт</a>
       </li>
+      <li class="nav-item">
+        <select onchange="window.location.href='/index.php/home/role/'+$(this).val()">
+            <option value=0 <?=($user_info->role==0?"selected":"")?>>Нет роли</option>
+            <option value=1 <?=($user_info->role==1?"selected":"")?>>Пользователь</option>
+            <option value=2 <?=($user_info->role==2?"selected":"")?>>Продавец</option>
+        </select>
+      </li>
       
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>

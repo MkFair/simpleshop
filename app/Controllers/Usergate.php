@@ -3,7 +3,10 @@
 namespace App\Controllers;
 use App\Models\Sitetype;
 class Usergate extends BaseController{
+    
+    
     function register(){
+        
         $m = new Sitetype();
         $this->data["types"] = $m->findAll();
         echo view("usergate/header");

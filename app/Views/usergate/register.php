@@ -18,7 +18,7 @@
 					<div class="tab-content">
 						<br>
 					  <div class="tab-pane fade show active" id="seller">
-					    <form onsubmit="sign_up();return false;">
+					    <form >
 					    	<label>ФИО</label>
 					    	<input type="text" class="form-control" name="fio" required=""><br>
 					    	<label>Email</label>
@@ -48,7 +48,7 @@
 					    </form>
 					  </div>
 					  <div class="tab-pane fade" id="client">
-					   	<form onsubmit="sign_up();return false;">
+					   	<form >
 					    	<label>ФИО</label>
 					    	<input type="text" class="form-control" name="fio" required><br>
 					    	<label>Email</label>
@@ -76,15 +76,18 @@ method seller_reg и buyer_reg
 ["status"=>"error","errorlist"=>AssocArray] возврат массива с именами полей и значением ошибки
 
 <script type="text/javascript">
-	function sign_up() {
-		 var forms = $("form").serializeArray();
+
+$("button").click(function(){
+	var forms = $("form").serializeArray();
 		 $.ajax({
         type: "POST",
         url: "log.php",
-        data: {inp:forms}
+        data:forms
     }).done(function( result )
         {
         	
-	})
-	}
+	})	
+})
+
+
 </script>

@@ -2,18 +2,26 @@
 
 	<h5 class="card-title">Данные по сайту</h5>
 	
+
+<div class="form-group">
    <label>Адрес сайта</label>
    <span  tabindex="0" data-toggle="tooltip" title="Для изменения данных обратитесь к администратору ">
-	<input type="text" class="form-control" disabled value="<?=$user_info->fio?>"> <br>
+	<input type="text" class="form-control" disabled value="<?=$user_info->fio?>"> 
 	</span>
+</div>
+
+<div class="form-group">
 	<label>Деятельность</label>
 	<span  tabindex="0" data-toggle="tooltip" title="Для изменения данных обратитесь к администратору ">
-	<input type="text" class="form-control" disabled value="<?=$user_info->password?>"><br>
+	<input type="text" class="form-control" disabled value="<?=$user_info->password?>">
 	</span>
+
+</div>
+<div class="form-group">
 	<label>Описание</label>
 	<span  tabindex="0" data-toggle="tooltip" title="Для изменения данных обратитесь к администратору ">
-	<textarea type="email" disabled class="form-control" ><?=$user_info->email?></textarea><br></span>
-
+	<textarea type="email" disabled class="form-control" ><?=$user_info->email?></textarea></span>
+</div>
 </div>
 	
 

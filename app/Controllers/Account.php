@@ -5,8 +5,11 @@ class Account extends AccountController{
     function index(){
         $session = session();
         $this->data["additional_block"] = "";
+        $this->data["additional_tab_panel"] = "";
         if($this->current_user->getRole())
             $this->data["additional_block"] = view("account/".$this->current_user->getRole()."_block");
+        if( $this->current_user->getRole() == "user" )
+            $this->data["additional_tab_panel"] = view("account/coupons");
         $this->data["error"] = $session->getFlashdata("error");
         $this->data["success"] = $session->getFlashdata("success");
         $this->display("account/index.php");

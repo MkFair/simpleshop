@@ -207,3 +207,13 @@ CRITICAL - 2021-04-25 08:06:06 --> Invalid file: aount/seller_block.php
 #6 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #7 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
 #8 {main}
+CRITICAL - 2021-04-25 09:38:58 --> syntax error, unexpected '{'
+#0 /home/mkalister/php/simpleshop/system/Common.php(1119): CodeIgniter\View\View->render()
+#1 /home/mkalister/php/simpleshop/app/Controllers/BaseController.php(47): view()
+#2 /home/mkalister/php/simpleshop/app/Controllers/Account.php(15): App\Controllers\BaseController->display()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Account->index()
+#4 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#5 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#6 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#8 {main}

@@ -1,3 +1,4 @@
+
 <div class="container">
 <br><br><br>	<div class="row">
 
@@ -18,7 +19,7 @@
 					<div class="tab-content">
 						<br>
 					  <div class="tab-pane fade show active" id="seller">
-					    <form >
+					    <form onsubmit="return false;" >
 
 					    	<div class="form-group">
 					    	<label>ФИО</label>
@@ -61,13 +62,13 @@
 							 </div>
 
 
-							<center><button class="btn btn-primary ">
+							<center><button class="btn btn-primary " name="seller_reg">
 							Зарегистрироваться
 								<br> </button></center>	
 					    </form>
 					  </div>
 					  <div class="tab-pane fade" id="client">
-					   	<form >
+					   	<form onsubmit="return false;" >
 
 					   		<div class="form-group">
 					    	<label>ФИО</label>
@@ -82,7 +83,7 @@
 							<label>Пароль</label>
 							<input type="password" class="form-control" name="password" required>
 							 </div>
-							<center><button class="btn btn-primary ">
+							<center><button class="btn btn-primary " name="buyer_reg">
 							Зарегистрироваться
 								<br> </button></center>	
 					    </form>
@@ -96,22 +97,37 @@
 		</div>
 	</div>
 </div>
-/index.php/usergate/<method>
-method seller_reg и buyer_reg
-["status"=>"ok"] - показывать сообщение о успехе реги и просьбе подтвердить почту - уже отправлено
-["status"=>"error","errorlist"=>AssocArray] возврат массива с именами полей и значением ошибки
+
+
 
 <script type="text/javascript">
 
 $("button").click(function(){
-	var forms = $("form").serializeArray();
+
+	var forms = $(this).parent("form").serializeArray();
+	var method_reg = $(this).attr("name");
 		 $.ajax({
         type: "POST",
-        url: "log.php",
+        url: "/index.php/usergate/"+method_reg+"",
         data:forms
     }).done(function( result )
         {
-        	
+        	let anw = JSON.parse(result);
+
+        	if(anw['status']=="ok") {
+        		alert("Вы успешно зарегистрировались, просьба подтвердить почту уже отправлена");
+        		location.href("/index.php");
+        	} 
+        	if (anw['status']=="error") {
+        		alert("ошибка");
+        		for (var feald in anw["errorlist"]) {
+
+        			$("[name="+feald+"]").parent().append("<small class='text-danger'>"+anw["errorlist"][feald]+"</small>");
+        		}
+        	}
+
+
+
 	})	
 })
 

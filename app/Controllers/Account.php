@@ -1,16 +1,41 @@
 <?php
 namespace App\Controllers;
 
-class Account extends BaseController{
+class Account extends AccountController{
     function index(){
-        $this->data["user_info"] = new \StdClass();
-        $this->data["user_info"]->fio = "Иван Иванов";
-        $this->data["user_info"]->email = "example@example.com";
-        $this->data["user_info"]->password = "password";
+        $session = session();
+        $this->data["additional_block"] = "";
+        if($this->current_user->getRole())
+            $this->data["additional_block"] = view("account/".$this->current_user->getRole()."_block");
+        $this->data["error"] = $session->getFlashdata("error");
+        $this->data["success"] = $session->getFlashdata("success");
         $this->display("account/index.php");
     }
     function update(){
-        
+        $request = \Config\Services::request();
+        $session = session();
+        if( $request->getMethod()=="post" ){
+            $validation = \Config\Services::validation();
+            $validation->setRules([
+                "fio"=>"required",
+                "email"=>"required|valid_email",
+                "password"=>"permit_empty|min_length[5]",
+            ]);//добавить доп проверку почты
+            if( $validation->run($request->getPost())!==false ){
+                $update_data = [];
+                if( $request->getPost("fio") )
+                    $update_data["fio"] = $request->getPost("fio");
+                if( $request->getPost("password") )
+                    $update_data["password"] = $request->getPost("password");
+                if( $request->getPost("email") )
+                    $update_data["email"] = $request->getPost("email");
+                $this->current_user->update($update_data);
+                $session->setFlashdata("success","Данные успешно обновлены");
+            }else{
+                $session->setFlashdata("error","ФИО и Email обязатеьны к заполнению. При смене пароля - минимальная длина пароля должна быть 5 символов.");
+            }
+        }
+        return redirect()->to("/account");
     }
     
 }

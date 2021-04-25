@@ -32,13 +32,25 @@ class User{
         $this->fio = $userdata->fio;
         $this->email = $userdata->email;
         $this->password = $userdata->password;
+        $this->role = $userdata->role;
     }
     function update(array $userdata){
-        $this->fio = $userdata["fio"];
-        $this->email = $userdata["email"];
-        $this->password = $this->password_hash($userdata["password"]);
+        if( !empty($userdata["fio"]) )
+            $this->fio = $userdata["fio"];
+        if( !empty($userdata["email"]) )
+            $this->email = $userdata["email"];
+        if( !empty($userdata["password"]) )
+            $this->password = $this->password_hash($userdata["password"]);
         $model = new \App\Models\User();
         $model->update($this->id,["fio"=>$this->fio,"password"=>$this->password,"email"=>$this->email]);
+    }
+    function getRole(){
+        return ( $this->role==1?"user":( $this->role==2?"seller":null ) );
+    }
+    function __get($key){
+        if( isset($this->$key) and $key!="password" ){
+            return $this->$key;
+        }
     }
     function password_hash(string $pass){
         return  password_hash($pass,PASSWORD_BCRYPT);

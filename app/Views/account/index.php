@@ -9,9 +9,7 @@
       <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#coupons">Мои купоны</a>
       </li>
-       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#coupons"></a>
-      </li>
+       
     </ul>
   </div>
   <div class="tab-content card-body" >
@@ -20,75 +18,24 @@
     <div class="row"> 
     <div class="col-lg-6">
 	<h5 class="card-title">Редактирование личных данных</h5>
-	<form>
-   	<label>ФИО</label>
-	<input type="text" class="form-control" name="fio" required value="<?=$user_info->fio?>"> <br>
-	<label>Email</label>
-	<input type="email" class="form-control" name="email" required placeholder="name@example.com" value="<?=$user_info->email?>"><br>
-	<label>Пароль</label>
-	<input type="password" class="form-control" name="password" required value="<?=$user_info->password?>"><br>
-	<button href="#" class="btn btn-primary">Сохранить</button>
+	<form method=post action="/index.php/account/update">
+        <?php 
+        if($error) echo"<div class='alert alert-danger alert-message'>$error</div>";
+        if($success) echo"<div class='alert alert-success alert-message'>$success</div>";
+        ?>
+        <label>ФИО</label>
+        <input type="text" class="form-control" name="fio" required value="<?=$user_info->fio?>"> <br>
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" required placeholder="name@example.com" value="<?=$user_info->email?>"><br>
+        <label>Пароль(отавить пустым если замена не требуется)</label>
+        <input type="password" class="form-control" name="password" placeholder="******" value="<?=$user_info->password?>"><br>
+        <button href="#" class="btn btn-primary">Сохранить</button>
 	</form>
 	</div>
     
-  <div class="col-lg-6">
-
-	<h5 class="card-title">Данные по сайту</h5>
-	
-   <label>Адрес сайта</label>
-   <span  tabindex="0" data-toggle="tooltip" title="Для изменения данных обратитесь к администратору ">
-	<input type="text" class="form-control" disabled value="<?=$user_info->fio?>"> <br>
-	</span>
-	<label>Деятельность</label>
-	<span  tabindex="0" data-toggle="tooltip" title="Для изменения данных обратитесь к администратору ">
-	<input type="text" class="form-control" disabled value="<?=$user_info->password?>"><br>
-	</span>
-	<label>Описание</label>
-	<span  tabindex="0" data-toggle="tooltip" title="Для изменения данных обратитесь к администратору ">
-	<textarea type="email" disabled class="form-control" ><?=$user_info->email?></textarea><br></span>
-
-</div>
-	</div>
-
-<br>
-	<div class="card">
-  <div class="card-header">УСЛУГИ</div>
-  <div class="card-body row">
-
-  	 <div class="col-lg-6">
-    <h5 class="card-title">Статистика</h5>
-    <p class="card-text">Количество проданных купоново - 20 шт.</p>
- 	</div>
- 	  <div class="col-lg-6">
-    <h5 class="card-title">Список услуг</h5>
-    <table class="table table-hover ">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Услуга</th>
-      <th scope="col">Кол. купонов</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Сменить масло</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Поменять подвеску</td>
-      <td>25</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Помыть машину</td>
-      <td>4</td>
-    </tr>
-  </tbody>
-</table>
- 	</div> </div>
-  </div>
+  <?=$additional_block?>
+  
+    </div>
 </div>
 <div class="tab-pane fade" id="coupons">
 

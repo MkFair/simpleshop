@@ -54,7 +54,7 @@ $(".alert").remove();
         	}else{ 
                 var anw = JSON.parse(result);
                 if(anw['status']=="ok") {
-                    location.href("/index.php/account");
+                    window.location.href="/index.php/account";
                 } 
             }
 

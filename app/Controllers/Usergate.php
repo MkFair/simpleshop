@@ -22,6 +22,7 @@ class Usergate extends BaseController{
         $email = $this->request->getVar("email",FILTER_SANITIZE_EMAIL);
         $password = $this->request->getVar("password");
         if( $email and $password ){
+            
             $user = \App\Libraries\User::login( $email, $password );
             if( $user ){
                 $user->set_session();
@@ -69,6 +70,7 @@ class Usergate extends BaseController{
         }
     }
     function buyer_reg(){
+        $request = \Config\Services::request();
         $validation = \Config\Services::validation();
         $validation->setRules([
             "fio"=>"required",
@@ -86,6 +88,11 @@ class Usergate extends BaseController{
             ]
         ]);
         if( $validation->run() ){
+            $user = \App\Libraries\User::create([
+                            "email"=>$request->getPost("email"),
+                            "fio"=>$request->getPost("fio"),
+                            "password"=>$request->getPost("password")
+                            ]);
             return json_encode(["status"=>"ok"]);
         }else{
             return json_encode(["status"=>"error","errorlist"=>$validation->getErrors()]);

@@ -6,9 +6,9 @@ class Account extends AccountController{
         $session = session();
         $this->data["additional_block"] = "";
         $this->data["additional_tab_panel"] = "";
-        if($this->current_user->getRole())
-            $this->data["additional_block"] = view("account/".$this->current_user->getRole()."_block");
-        if( $this->current_user->getRole() == "user" )
+        if($this->current_user->get_role())
+            $this->data["additional_block"] = view("account/".$this->current_user->get_role()."_block",$this->data);
+        if( $this->current_user->get_role() == "user" )
             $this->data["additional_tab_panel"] = view("account/coupons");
         $this->data["error"] = $session->getFlashdata("error");
         $this->data["success"] = $session->getFlashdata("success");

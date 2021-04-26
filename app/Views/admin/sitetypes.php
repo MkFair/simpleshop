@@ -10,7 +10,7 @@
 	<form action="/admin/sitetypes/add" method=post>
 		
 		<div class="form-group ">
-			<label>Добавить новую категорию</label>
+			<label>Добавление новой категории</label>
 		    <input class="form-control" type="text" name="newtype" >
 			</div>
 		    <button class="btn btn-primary">Сохранить</button>

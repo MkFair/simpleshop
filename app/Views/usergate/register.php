@@ -104,7 +104,7 @@
 
 $("button").click(function(){
 
-	var forms = $(this).parent("form").serializeArray();
+	var forms = $(this).parents("form").serializeArray();
 	var method_reg = $(this).attr("name");
 		 $.ajax({
         type: "POST",
@@ -115,13 +115,13 @@ $("button").click(function(){
         	let anw = JSON.parse(result);
 
         	if(anw['status']=="ok") {
-        		alert("Вы успешно зарегистрировались, просьба подтвердить почту уже отправлена");
+        		$(this).parents("form").append("<div class='alert alert-success'>Вы успешно зарегистрировались, просьба подтвердить почту уже отправлена</div>");
         		location.href("/index.php");
         	} 
         	if (anw['status']=="error") {
-        		alert("ошибка");
+        		$("small").remove();
         		for (var feald in anw["errorlist"]) {
-
+        			
         			$("[name="+feald+"]").parent().append("<small class='text-danger'>"+anw["errorlist"][feald]+"</small>");
         		}
         	}

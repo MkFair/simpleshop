@@ -32,31 +32,31 @@
 	</div>
 </div>
 
-пустой результ - ошибка
-["status"=>"ok"] - пересыл на /index.php/account
+
 <script type="text/javascript">
 
 $("button").click(function(){
 
 $(".alert").remove();
-
-	alert("hhhhgh");
 		 var forms = $("form").serializeArray();
 		 $.ajax({
         type: "POST",
         url: "/index.php/usergate/login_process",
-        data: {inp:forms}
+        data: forms
     }).done(function( result )
         {
 
-        	var anw = json.parse(result);
+        	
 
-        	if(anw==""){
+        	if(result==""){
         		$("form").prepend("<div class='alert alert-danger' role='alert'>Неправильный логин или пароль</div>")
 
-        	}else if(anw['status']=="ok") {
-        		location.href("/index.php/account");
-        	} 
+        	}else{ 
+                var anw = JSON.parse(result);
+                if(anw['status']=="ok") {
+                    location.href("/index.php/account");
+                } 
+            }
 
 		})
 })

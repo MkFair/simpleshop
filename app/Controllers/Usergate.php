@@ -19,8 +19,14 @@ class Usergate extends BaseController{
         echo view("usergate/footer");
     }
     function login_process(){
-        if( $this->request->getVar("email",FILTER_SANITIZE_EMAIL) and $this->request->getVar("password") ){
-            
+        $email = $this->request->getVar("email",FILTER_SANITIZE_EMAIL);
+        $password = $this->request->getVar("password");
+        if( $email and $password ){
+            $user = \App\Libraries\User::login( $email, $password );
+            if( $user ){
+                $user->set_session();
+                echo json_encode(["status"=>"ok"]);
+            }
         }
     }
     function seller_reg(){

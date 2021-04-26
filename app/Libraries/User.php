@@ -13,6 +13,16 @@ class User{
         $user = new User($new_user_id);
         return $user;
     }
+    static function login($email,$password){
+        $password = self::password_hash($password);
+        $model = new \App\Models\User();
+        $user = $model->where(["email"=>$email,"password"=>$password])->first();
+
+        if( $user ){
+            return new User($user->id);
+        }
+        return false;
+    }
     function set_session(){
         $session = session();
         $session->set("user",["id"=>$this->id]);

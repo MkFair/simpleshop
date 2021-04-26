@@ -393,3 +393,59 @@ CRITICAL - 2021-04-25 11:57:13 --> syntax error, unexpected end of file
 #5 C:\Users\11\Documents\GitHub\simpleshop\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 C:\Users\11\Documents\GitHub\simpleshop\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\11\\Doc...')
 #7 {main}
+CRITICAL - 2021-04-25 14:30:52 --> syntax error, unexpected '}', expecting ';' or ','
+#0 /home/mkalister/php/simpleshop/system/Router/Router.php(195): CodeIgniter\Router\Router->autoRoute()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(793): CodeIgniter\Router\Router->handle()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}
+CRITICAL - 2021-04-25 14:30:59 --> syntax error, unexpected '}', expecting ';' or ','
+#0 /home/mkalister/php/simpleshop/system/Router/Router.php(195): CodeIgniter\Router\Router->autoRoute()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(793): CodeIgniter\Router\Router->handle()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}
+CRITICAL - 2021-04-25 14:32:11 --> Using $this when not in object context
+#0 /home/mkalister/php/simpleshop/app/Controllers/Usergate.php(25): App\Libraries\User::login()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Usergate->login_process()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}
+CRITICAL - 2021-04-25 14:32:15 --> Using $this when not in object context
+#0 /home/mkalister/php/simpleshop/app/Controllers/Usergate.php(25): App\Libraries\User::login()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Usergate->login_process()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}
+CRITICAL - 2021-04-25 14:32:27 --> Using $this when not in object context
+#0 /home/mkalister/php/simpleshop/app/Controllers/Usergate.php(25): App\Libraries\User::login()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Usergate->login_process()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}
+CRITICAL - 2021-04-25 14:32:28 --> Using $this when not in object context
+#0 /home/mkalister/php/simpleshop/app/Controllers/Usergate.php(25): App\Libraries\User::login()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Usergate->login_process()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}
+CRITICAL - 2021-04-25 14:37:36 --> Object of class stdClass could not be converted to string
+#0 /home/mkalister/php/simpleshop/app/Controllers/Usergate.php(25): App\Libraries\User::login()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Usergate->login_process()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}

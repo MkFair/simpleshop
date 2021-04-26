@@ -25,8 +25,11 @@ class Shop{
         $data = $model->where([$key=>$val])->first();
         $this->fill_current($data);
     }
-    static function create(array $fields){
-        $this->from_db("user_id",$fields["user_id"]);
+    static function create(int $user_id, array $fields){
+        //$this->from_db("user_id",$fields["user_id"]);
+        $model = new \App\Models\Shop();
+        $id = $model->insert(["user_id"=>$user_id,"url"=>$fields["url"],"description"=>$fields["description"],"created_on"=>new DateTime()]);
+        
     }
     
 }

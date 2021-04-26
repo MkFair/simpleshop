@@ -23,7 +23,7 @@ class Seller extends User{
     static function create_user($user_id){
         return new Seller($user_id);
     }
-    function create_shop(array $shop_info){
-        $this->shop = Shop::create($this->id,$shop_info);
+    function create_shop( array $shop_info, array $services ){
+        $this->shop = Shop::create($this->id,$shop_info,$services);
     }
 }

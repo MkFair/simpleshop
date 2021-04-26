@@ -12,7 +12,7 @@ class Home extends BaseController
         $seller = Seller::create(["email"=>"admin@admin1.com","fio"=>"Иван Иванов","password"=>"password1"]);
         $seller->set_role(2);
         $seller->set_session();
-        $seller->create_shop(["url"=>"shop.shop","description"=>"description","type"=>1]);
+        $seller->create_shop(["url"=>"shop.shop","description"=>"description","type"=>1],["Отмыть машину","Угнать машину","Утопить машину"]);
         var_dump($seller);
     }
     function test_user(){

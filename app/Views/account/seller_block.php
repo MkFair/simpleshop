@@ -45,21 +45,16 @@
     </tr>
   </thead>
   <tbody>
+    <?php
+      if( $user_info->shop->services ){
+          foreach( $user_info->shop->services as $k=>$service ){
+    ?>
     <tr>
-      <th scope="row">1</th>
-      <td>Сменить масло</td>
-      <td>2</td>
+      <th scope="row"><?=$k+1?></th>
+      <td><?=$service["title"]?></td>
+      <td><?=$service["price"]?></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Поменять подвеску</td>
-      <td>25</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Помыть машину</td>
-      <td>4</td>
-    </tr>
+    <?php } }?>
   </tbody>
 </table>
  	</div> </div>

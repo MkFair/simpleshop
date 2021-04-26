@@ -8,14 +8,7 @@ mainpage
         <?php endforeach; ?>
     <?php endif; ?>
 </select>
-<script>
-    $(function(){
-        $("#main_filter").change(function(){
-            var type_id = $(this).val();
-            window.location.href="/?type="+type_id;
-        });
-    })
-</script>
+
 
 <?php if( $shop_list ):?>
     <?php foreach( $shop_list as $shop ):?>

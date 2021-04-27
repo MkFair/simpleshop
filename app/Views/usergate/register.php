@@ -46,7 +46,8 @@
 							<textarea class="form-control" name="site_type" required></textarea>
                              </div>
                             <div class="form-group">
-                                <select>
+                                <label>Деятельность</label>
+                                <select class="form-control" value="type">
                                 <?php 
                                 if($types){
                                     foreach($types as $type){?>
@@ -57,14 +58,20 @@
                             
 
                             <div class="form-group">
-							<label>Деятельность</label>
-							<input type="text" class="form-control" name="services" required>
-							 </div>
+                                <label>Список услуг</label>
+                                <input type="text" class="form-control mb-1" name="services[]" required>
+                                <input type="text" class="form-control mb-1" name="services[]" required>
+                                <input type="text" class="form-control mb-1" name="services[]" required>
+                                <input type="text" class="form-control mb-1" name="services[]" required>
+                                <input type="text" class="form-control" name="services[]" required>
+                            </div>
 
 
-							<center><button class="btn btn-primary " name="seller_reg">
-							Зарегистрироваться
-								<br> </button></center>	
+							<center>
+                                <button class="btn btn-primary " name="seller_reg">
+                                Зарегистрироваться
+                                </button>
+                            </center>	
 					    </form>
 					  </div>
 					  <div class="tab-pane fade" id="client">

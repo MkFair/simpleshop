@@ -17,6 +17,11 @@ class Shop{
         else
             $this->from_db("id",$id);
     }
+    function toggle_selling(){
+        $this->selling_on = !$this->selling_on;
+        $model = new \App\Models\Shop();
+        $data = $model->update($this->id,["selling_on"=>$this->selling_on]);
+    }
     function fill_current(array $fields){
         $this->id = empty($fields["id"])?0:$fields["id"];
         $this->user_id = $fields["user_id"];

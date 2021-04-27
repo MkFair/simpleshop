@@ -91,4 +91,17 @@ class Shop{
         }
         return [];
     }
+    function request_coupons(int $user_id, int $count ){
+        $status = false;
+        $m = new \App\Models\Coupons();
+        $date = new DateTime("NOW");
+        $status = $m->insert([
+            "user_id"=>$user_id, 
+            "created_on"=>$date->format("Y-m-d H:i:s"), 
+            "shop_id"=>$this->id,
+            "count"=>$count,
+        ]);
+        //$m->
+        return $status;
+    }
 }

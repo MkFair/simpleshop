@@ -118,3 +118,36 @@ CRITICAL - 2021-04-27 08:12:31 --> Argument 2 passed to App\Libraries\User::chec
 #4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
 #6 {main}
+CRITICAL - 2021-04-27 12:32:32 --> Class 'Config\Service' not found
+#0 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Mainpage->buy()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#5 {main}
+CRITICAL - 2021-04-27 12:33:07 --> Undefined constant 'App\Models'
+#0 /home/mkalister/php/simpleshop/system/Autoloader/Autoloader.php(365): require_once()
+#1 /home/mkalister/php/simpleshop/system/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile()
+#2 /home/mkalister/php/simpleshop/system/Autoloader/Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+#4 /home/mkalister/php/simpleshop/app/Libraries/Shop.php(96): spl_autoload_call()
+#5 /home/mkalister/php/simpleshop/app/Controllers/Mainpage.php(33): App\Libraries\Shop->request_coupons()
+#6 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Mainpage->buy()
+#7 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#8 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#10 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#11 {main}
+CRITICAL - 2021-04-27 12:34:18 --> Undefined constant 'App\Models'
+#0 /home/mkalister/php/simpleshop/system/Autoloader/Autoloader.php(365): require_once()
+#1 /home/mkalister/php/simpleshop/system/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile()
+#2 /home/mkalister/php/simpleshop/system/Autoloader/Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+#4 /home/mkalister/php/simpleshop/app/Libraries/Shop.php(96): spl_autoload_call()
+#5 /home/mkalister/php/simpleshop/app/Controllers/Mainpage.php(33): App\Libraries\Shop->request_coupons()
+#6 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Mainpage->buy()
+#7 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#8 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#10 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#11 {main}

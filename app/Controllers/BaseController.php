@@ -35,7 +35,14 @@ class BaseController extends Controller
 	{
 		// Do Not Edit This Line
 		parent::initController($request, $response, $logger);
-
+        $sess = session();
+        $user = $sess->get("user");
+        if( $user ){
+            if( \App\Libraries\User::check_role(1,$user["id"]) )
+                $this->data["user_info"] = $this->current_user = \App\Libraries\User::get_session();
+            else
+                $this->data["user_info"] = $this->current_user = \App\Libraries\Seller::get_session();
+        }
 		//--------------------------------------------------------------------
 		// Preload any models, libraries, etc, here.
 		//--------------------------------------------------------------------

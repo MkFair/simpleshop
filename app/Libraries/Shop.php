@@ -11,8 +11,11 @@ class Shop{
      protected $user_id;
      protected $services;
      
-    function __construct($user_id){
-        $this->from_db("user_id",$user_id);
+    function __construct($id,$user_id_flag=true){
+        if($user_id_flag)
+            $this->from_db("user_id",$id);
+        else
+            $this->from_db("id",$id);
     }
     function fill_current(array $fields){
         $this->id = empty($fields["id"])?0:$fields["id"];

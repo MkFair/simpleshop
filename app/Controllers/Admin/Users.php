@@ -4,11 +4,13 @@ namespace App\Controllers\Admin;
 class Users extends AdminController{
     function users(){
         $model = new \App\Models\User();
-        $this->data["users"] = $model->select(["email","id"])->where(["role"=>1])->findAll();
+        $this->data["profile"] = "user";
+        $this->data["users"] = $model->select(["email","id","role"])->where(["role"=>1])->findAll();
         $this->display("admin/users");
     }
     function sellers(){
         $model = new \App\Models\User();
+        $this->data["profile"] = "seller";
         $this->data["users"] = $model->select(["email","id"])->where(["role"=>2])->findAll();
         $this->display("admin/users");
     }

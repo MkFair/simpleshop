@@ -87,7 +87,7 @@ class Usergate extends BaseController{
                 "min_length"=>"Минимальная длинна пароля составляет 5 символов"
             ]
         ]);
-        if( $validation->run() ){
+        if( $validation->run($request->getPost()) ){
             $user = \App\Libraries\User::create([
                             "email"=>$request->getPost("email"),
                             "fio"=>$request->getPost("fio"),

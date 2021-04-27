@@ -1,0 +1,82 @@
+CRITICAL - 2021-04-27 04:41:42 --> Call to a member function set_role() on null
+#0 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Home->test_user()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#5 {main}
+CRITICAL - 2021-04-27 04:42:13 --> Call to a member function set_role() on null
+#0 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Home->test_user()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#5 {main}
+CRITICAL - 2021-04-27 04:55:41 --> Invalid file: shops.php
+#0 /home/mkalister/php/simpleshop/system/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /home/mkalister/php/simpleshop/system/Common.php(1119): CodeIgniter\View\View->render()
+#2 /home/mkalister/php/simpleshop/app/Controllers/Admin/AdminController.php(35): view()
+#3 /home/mkalister/php/simpleshop/app/Controllers/Admin/Shops.php(6): App\Controllers\Admin\AdminController->display()
+#4 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Admin\Shops->index()
+#5 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#9 {main}
+CRITICAL - 2021-04-27 04:56:00 --> Invalid file: shops.php
+#0 /home/mkalister/php/simpleshop/system/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /home/mkalister/php/simpleshop/system/Common.php(1119): CodeIgniter\View\View->render()
+#2 /home/mkalister/php/simpleshop/app/Controllers/Admin/AdminController.php(35): view()
+#3 /home/mkalister/php/simpleshop/app/Controllers/Admin/Shops.php(6): App\Controllers\Admin\AdminController->display()
+#4 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Admin\Shops->index()
+#5 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#9 {main}
+CRITICAL - 2021-04-27 04:56:23 --> Invalid file: admin/shops.php
+#0 /home/mkalister/php/simpleshop/system/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /home/mkalister/php/simpleshop/system/Common.php(1119): CodeIgniter\View\View->render()
+#2 /home/mkalister/php/simpleshop/app/Controllers/Admin/AdminController.php(35): view()
+#3 /home/mkalister/php/simpleshop/app/Controllers/Admin/Shops.php(6): App\Controllers\Admin\AdminController->display()
+#4 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Admin\Shops->index()
+#5 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#9 {main}
+CRITICAL - 2021-04-27 04:58:11 --> Too few arguments to function App\Libraries\Shop::by_type(), 0 passed in /home/mkalister/php/simpleshop/app/Controllers/Admin/Shops.php on line 6 and exactly 1 expected
+#0 /home/mkalister/php/simpleshop/app/Controllers/Admin/Shops.php(6): App\Libraries\Shop::by_type()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Admin\Shops->index()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}
+CRITICAL - 2021-04-27 05:01:52 --> Call to undefined function App\Libraries\Shop()
+#0 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Admin\Shops->show()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#5 {main}
+CRITICAL - 2021-04-27 05:02:06 --> Argument 1 passed to App\Libraries\Shop::fill_current() must be of the type array, null given, called in /home/mkalister/php/simpleshop/app/Libraries/Shop.php on line 36
+#0 /home/mkalister/php/simpleshop/app/Libraries/Shop.php(36): App\Libraries\Shop->fill_current()
+#1 /home/mkalister/php/simpleshop/app/Libraries/Shop.php(15): App\Libraries\Shop->from_db()
+#2 /home/mkalister/php/simpleshop/app/Controllers/Admin/Shops.php(10): App\Libraries\Shop->__construct()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Admin\Shops->show()
+#4 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#5 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#6 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#8 {main}
+CRITICAL - 2021-04-27 05:04:03 --> Argument 1 passed to App\Libraries\Shop::fill_current() must be of the type array, null given, called in /home/mkalister/php/simpleshop/app/Libraries/Shop.php on line 39
+#0 /home/mkalister/php/simpleshop/app/Libraries/Shop.php(39): App\Libraries\Shop->fill_current()
+#1 /home/mkalister/php/simpleshop/app/Libraries/Shop.php(16): App\Libraries\Shop->from_db()
+#2 /home/mkalister/php/simpleshop/app/Controllers/Admin/Shops.php(10): App\Libraries\Shop->__construct()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Admin\Shops->show()
+#4 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#5 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#6 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#8 {main}

@@ -18,7 +18,7 @@ class Home extends BaseController
     function test_user(){
         
         $user = User::create(["email"=>"admin@admin.com","fio"=>"Иван Иванов","password"=>"password"]);
-        $seller->set_role(1);
+        $user->set_role(1);
         $user->set_session();
         var_dump($user);
     }

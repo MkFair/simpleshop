@@ -14,6 +14,10 @@ class User{
         $user = static::create_user($new_user_id);
         return $user;
     }
+    static function is_user(){
+        $session = session();
+        return $session->has("user");
+    } 
     static function create_user($user_id){
         return new User($user_id);
     }

@@ -3,7 +3,12 @@ namespace App\Controllers\Admin;
 
 class Shops extends AdminController{
     function index(){
-        $this->data["shops"] = \App\Libraries\Shop::by_type(0);
+        $request = \Config\Services::request();
+        if( !$request->getGet("search") )
+            $this->data["shops"] = \App\Libraries\Shop::by_type(0);
+        else{
+            $this->data["shops"] = \App\Libraries\Shop::by_url( $request->getGet("search") );
+        }
         $this->display("admin/shops");
     }
     function change_selling($id){

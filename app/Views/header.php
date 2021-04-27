@@ -28,6 +28,7 @@
       </li>
       
     </ul>
+    <?php if(\App\Libraries\User::is_user()){?>
     <li class="nav-item mr-2">
         <select onchange="window.location.href='/index.php/home/role/'+$(this).val()">
             <option value=0 <?=($user_info->role==0?"selected":"")?>>Нет роли</option>
@@ -36,8 +37,11 @@
         </select>
       </li>
     
-      <a href="/account" class="btn btn-outline-success my-2 my-sm-0" type="submit">Личный кабинет</a>
-    
+      <a href="/account" class="btn btn-outline-success my-2 my-sm-0">Личный кабинет</a>
+    <?php }else{ ?>
+        <a href="/usergate/login" class="btn btn-outline-success my-2 my-sm-0 mr-1" >Вход</a>
+        <a href="/usergate/register" class="btn btn-outline-warning my-2 my-sm-0">Регистрация</a>
+    <?php } ?>
   </div>
     </div>
 	</nav>

@@ -80,3 +80,41 @@ CRITICAL - 2021-04-27 05:04:03 --> Argument 1 passed to App\Libraries\Shop::fill
 #6 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #7 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
 #8 {main}
+CRITICAL - 2021-04-27 08:06:06 --> Call to undefined method App\Libraries\Shop::by_url()
+#0 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Admin\Shops->index()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#5 {main}
+CRITICAL - 2021-04-27 08:06:27 --> Call to undefined method App\Libraries\Shop::by_url()
+#0 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Admin\Shops->index()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#5 {main}
+CRITICAL - 2021-04-27 08:06:40 --> Argument 1 passed to App\Libraries\Shop::by_url() must be of the type string, null given, called in /home/mkalister/php/simpleshop/app/Controllers/Admin/Shops.php on line 10
+#0 /home/mkalister/php/simpleshop/app/Controllers/Admin/Shops.php(10): App\Libraries\Shop::by_url()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(918): App\Controllers\Admin\Shops->index()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}
+CRITICAL - 2021-04-27 08:12:18 --> Argument 2 passed to App\Libraries\User::check_role() must be of the type int, null given, called in /home/mkalister/php/simpleshop/app/Controllers/AccountController.php on line 12
+#0 /home/mkalister/php/simpleshop/app/Controllers/AccountController.php(12): App\Libraries\User::check_role()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(891): App\Controllers\AccountController->initController()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}
+CRITICAL - 2021-04-27 08:12:31 --> Argument 2 passed to App\Libraries\User::check_role() must be of the type int, null given, called in /home/mkalister/php/simpleshop/app/Controllers/AccountController.php on line 12
+#0 /home/mkalister/php/simpleshop/app/Controllers/AccountController.php(12): App\Libraries\User::check_role()
+#1 /home/mkalister/php/simpleshop/system/CodeIgniter.php(891): App\Controllers\AccountController->initController()
+#2 /home/mkalister/php/simpleshop/system/CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#3 /home/mkalister/php/simpleshop/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/mkalister/php/simpleshop/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /home/mkalister/php/simpleshop/system/Commands/Server/rewrite.php(34): require_once('/home/mkalister...')
+#6 {main}

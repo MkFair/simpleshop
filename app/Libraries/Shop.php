@@ -79,4 +79,16 @@ class Shop{
         }
         return [];
     }
+    static function by_url(string $search_url){
+        $model = new \App\Models\Shop();
+        $shop_list = $model->select("user_id")->where(["url"=>$search_url])->findAll();
+        if( $shop_list ){
+            $shop_list_obj = [];
+            foreach( $shop_list as $shop_record ){
+                $shop_list_obj[] = new Shop( $shop_record["user_id"] );
+            }
+            return $shop_list_obj;
+        }
+        return [];
+    }
 }

@@ -22,6 +22,9 @@ class Shop{
         $model = new \App\Models\Shop();
         $data = $model->update($this->id,["selling_on"=>$this->selling_on]);
     }
+    function get_type_id(){
+        return $this->type;
+    }
     function fill_current(array $fields){
         $this->id = empty($fields["id"])?0:$fields["id"];
         $this->user_id = $fields["user_id"];

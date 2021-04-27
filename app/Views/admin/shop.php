@@ -15,25 +15,31 @@
         <div class="card-body">
             
 
-            <form method=post>
+            <form method=post action="/index.php/admin/shops/update/<?=$shop->id?>">
             <div class="form-group">
                <label>Адрес сайта</label>
-               <span  tabindex="0" data-toggle="tooltip" title="Для изменения данных обратитесь к администратору ">
-                <input type="text" class="form-control" value="<?=$shop->url?>"> 
+               <span  tabindex="0" data-toggle="tooltip" title=" ">
+                <input type="text" class="form-control" name=url value="<?=$shop->url?>"> 
                 </span>
             </div>
 
             <div class="form-group">
                 <label>Деятельность</label>
-                <span  tabindex="0" data-toggle="tooltip" title="Для изменения данных обратитесь к администратору ">
-                <input type="text" class="form-control" value="<?=$shop->type?>">
+                <span  tabindex="0" data-toggle="tooltip" title=" ">
+                <select name=type class="form-control">
+                    <?php if( $types ){
+                        foreach( $types as $type ){
+                    ?>
+                        <option value="<?=$type["id"]?>" <?=(($shop->get_type_id()==$type["id"])?"selected":"")?>><?=$type["name"]?></option>
+                    <?php } } ?>
+                </select>
                 </span>
 
             </div>
             <div class="form-group">
                 <label>Описание</label>
-                <span  tabindex="0" data-toggle="tooltip" title="Для изменения данных обратитесь к администратору ">
-                <textarea type="email" class="form-control" ><?=$shop->description?></textarea></span>
+                <span  tabindex="0" data-toggle="tooltip" title=" ">
+                <textarea  name="description" class="form-control" ><?=$shop->description?></textarea></span>
             </div>
             <button class="btn btn-primary">Сохранить</button>
             </form>
@@ -53,6 +59,7 @@
  	</div>
  	  <div class="col-lg-12 mt-3">
     <h5 class="card-title">Список услуг</h5>
+    <form method=post action="/admin/shops/change_services/<?=$shop->id?>">
     <table class="table table-hover ">
   <thead>
     <tr>
@@ -66,13 +73,16 @@
           foreach( $shop->services as $k=>$service ){
     ?>
     <tr>
+        <input type=hidden name="id_list[]" value="<?=$service["id"]?>">
       <td><input type=text name="service_title[<?=$service["id"]?>]" value="<?=$service["title"]?>" class="form-control"></td>
       <td><input type=text name="service_price[<?=$service["id"]?>]" value="<?=$service["price"]?>" class="form-control"></td>
     </tr>
     <?php } }?>
   </tbody>
 </table>
+
 <button class="btn btn-primary">Сохранить</button>
+</form>
  	</div> </div>
   </div>
     </div>

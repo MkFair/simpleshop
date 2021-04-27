@@ -11,6 +11,10 @@ class Mainpage extends BaseController{
         $this->display("index");
     }
     function show($id){
+        $this->data["site"] = new \App\Libraries\Shop($id,false);
+        if( !$this->data["site"] ){
+            return redirect()->to("/");
+        }
         $this->display("show_site");
     }
 }
